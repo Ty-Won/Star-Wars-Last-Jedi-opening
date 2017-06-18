@@ -1,0 +1,122 @@
+body{
+    background:url("images/space.jpg");
+}
+
+.star,.wars,.byLine{
+    position:absolute;
+}
+
+img {
+   left: 50%;
+   width: 500px;
+   height: auto;
+   margin-left: -250px; /* Half the width */
+}
+
+.byline {
+  color: #fff;
+  font-family: "ITC Serif Gothic", Lato;
+  font-size: 2.5em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 38%;
+  animation: move-byline 10s linear infinite;
+    
+}
+
+
+.byLine span{
+    display: inline-block;
+    
+    animation: spinLetters 10s linear infinite;
+
+}
+
+
+.star{
+    top: 25%;
+    animation:star 10s infinite;
+}
+
+.wars{
+    top:52%;
+    animation:wars 10s  infinite;
+}
+
+@keyframes star {
+    0%{
+        opacity:0;
+        transform: scale(1.5) translate(-0.75em);
+    }
+
+    20%{
+        opacity:1;
+    }
+    89%{
+        opacity:1;
+        transform:scale(1);
+    }
+    100%{
+        opacity:0;
+        transform:translateZ(-1000em);
+    }
+}
+
+@keyframes wars {
+    0%{
+        opacity:0;
+        transform: scale(1.5) translate(0.5em);
+    }
+
+    20%{
+        opacity:1;
+    }
+    89%{
+        opacity:1;
+        transform:scale(1);
+    }
+    100%{
+        opacity:0;
+        transform:translateZ(-1000em);
+    }
+}
+/*
+.starwars-title{
+    transform-style: preserve-3d;
+    perspective:800px;
+}*/
+
+
+
+
+
+@keyframes spinLetters{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+
+    30%{
+        opacity: 1;
+    }
+    70%,80%{
+        opacity:0.8;
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
